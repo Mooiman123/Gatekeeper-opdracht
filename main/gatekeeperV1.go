@@ -2,19 +2,19 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func main() {
-	hour := time.Now().Hour() // Haal alleen het uur op
+	var i string
+	fmt.Print("Voer uw kenteken in: ")
+	fmt.Scan(&i)
 
-	if hour > 7 && hour < 12 {
-		fmt.Println("Goedemorgen! Welkom bij Fonteyn Vakantieparken!")
-	} else if hour > 12 && hour < 18 {
-		fmt.Println("Goedemiddag! Welkom bij Fonteyn Vakantieparken!")
-	} else if hour > 18 && hour < 23 {
-		fmt.Println("Goedenavond! Welkom bij Fonteyn Vakantieparken!")
+	// Controle of het kenteken in de lijst voorkomt
+	if i == "AB-123-CD" || i == "XY-456-ZZ" || i == "LM-789-OP" {
+		// Als het i in de lijst staat
+		fmt.Println("Goedemorgen! Welkom bij Fonteyn Vakantieparken!", i)
 	} else {
-		fmt.Println("Sorry, de parkeerplaats is gesloten")
+		// Als het i niet in de lijst staat
+		fmt.Println("U heeft helaas geen toegang tot het parkeerterrein")
 	}
 }
