@@ -1,0 +1,21 @@
+# Go build bestanden
+*.exe
+*.out
+*.o
+*.a
+*.so
+/mijn_go_app
+
+# Go modules en cache
+/bin/
+/pkg/
+go.sum
+
+# IDE bestanden
+.vscode/
+.idea/
+*.log
+
+# Systeem specifieke bestanden
+.DS_Store
+Thumbs.db
